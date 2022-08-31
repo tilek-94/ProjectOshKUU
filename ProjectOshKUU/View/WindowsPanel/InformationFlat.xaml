@@ -1,0 +1,42 @@
+﻿<Window x:Class="ProjectOshKUU.View.WindowsPanel.InformationFlat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectOshKUU.View.WindowsPanel"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded" Width="800" Height="200"
+        WindowStartupLocation="CenterScreen"  AllowsTransparency="True" WindowStyle="None">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="5" ShadowDepth="0"  RenderingBias="Quality"/>
+    </Window.Effect>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#536872"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock HorizontalAlignment="Center" 
+                       Margin="0,20,0,0" Foreground="#536872" 
+                       x:Name="txtHead"
+                       FontSize="22"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Text="Использование эффекта размытия | Расширенная библиотека для WPF и Silverlight"/>
+            <TextBlock TextAlignment="Justify" 
+                       Margin="20"
+                       Foreground="#536872" 
+                       TextWrapping="Wrap"
+                       x:Name="txtContent"
+                       FontSize="16"
+                       Text=""/>
+           
+        </StackPanel>
+        <Button Click="Button_Click" Grid.Row="2" BorderThickness="0" 
+                Content="Закрыть" FontSize="16"
+                 Height="45" Width="150"/>
+    </Grid>
+</Window>

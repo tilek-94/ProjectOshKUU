@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\Building\bank.png" />
+    <None Remove="Image\Building\bank2.png" />
+    <None Remove="Image\Building\loading-load.gif" />
+    <None Remove="Image\Building\preloader.gif" />
+    <None Remove="Image\e1.png" />
+    <None Remove="Image\e2.png" />
+    <None Remove="Image\e3.png" />
+    <None Remove="Image\FastAccess\book.png" />
+    <None Remove="Image\FastAccess\door.png" />
+    <None Remove="Image\FastAccess\maps-and-flags.png" />
+    <None Remove="Image\FastAccess\restaurant2.png" />
+    <None Remove="Image\FastAccess\toilet.png" />
+    <None Remove="Image\FlagKG.jpg" />
+    <None Remove="Image\Flag\KGZ1.png" />
+    <None Remove="Image\Flag\Russ.png" />
+    <None Remove="Image\icon2.png" />
+    <None Remove="Image\Logo.png" />
+    <None Remove="Image\open-book.png" />
+    <None Remove="Image\restaurant.png" />
+    <None Remove="Image\russia-flag.jpg" />
+    <None Remove="Image\S1.png" />
+    <None Remove="Image\single-door.png" />
+    <None Remove="Image\t1.png" />
+    <None Remove="Image\t2.png" />
+    <None Remove="Image\wc.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\Building\bank.png" />
+    <Resource Include="Image\Building\bank2.png" />
+    <Resource Include="Image\Building\loading-load.gif" />
+    <Resource Include="Image\Building\preloader.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\e1.png" />
+    <Resource Include="Image\e2.png" />
+    <Resource Include="Image\e3.png" />
+    <Resource Include="Image\FastAccess\book.png" />
+    <Resource Include="Image\FastAccess\door.png" />
+    <Resource Include="Image\FastAccess\maps-and-flags.png" />
+    <Resource Include="Image\FastAccess\restaurant2.png" />
+    <Resource Include="Image\FastAccess\toilet.png" />
+    <Resource Include="Image\FlagKG.jpg" />
+    <Resource Include="Image\Flag\KGZ1.png" />
+    <Resource Include="Image\Flag\Russ.png" />
+    <Resource Include="Image\icon2.png" />
+    <Resource Include="Image\Logo.png" />
+    <Resource Include="Image\open-book.png" />
+    <Resource Include="Image\restaurant.png" />
+    <Resource Include="Image\russia-flag.jpg" />
+    <Resource Include="Image\S1.png" />
+    <Resource Include="Image\single-door.png" />
+    <Resource Include="Image\t1.png" />
+    <Resource Include="Image\t2.png" />
+    <Resource Include="Image\wc.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\Korpus1\Floor3.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Korpus1\Floor0.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Korpus1\Floor4.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowsPanel\AddInformationWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

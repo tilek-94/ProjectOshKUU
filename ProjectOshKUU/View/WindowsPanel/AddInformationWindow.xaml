@@ -1,0 +1,103 @@
+﻿<Window x:Class="ProjectOshKUU.View.WindowsPanel.AddInformationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectOshKUU.View.WindowsPanel"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded" Width="700" Height="400"
+        WindowStartupLocation="CenterScreen"  AllowsTransparency="True" WindowStyle="None">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="5" ShadowDepth="0"  RenderingBias="Quality"/>
+    </Window.Effect>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#536872"/>
+        <TabControl Grid.Row="1" BorderThickness="0">
+            <TabItem >
+                <TabItem.Header >
+                    <TextBlock Margin="3" Width="30" TextAlignment="Center">KG</TextBlock>
+                   
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel >
+                        <TextBlock Margin="50,10,0,0" FontSize="16" Foreground="#536872" Text="Аудиториянын номери"/>
+                        <TextBox x:Name="TextNumer" Width="600" Height="30" Foreground="#536872" FontSize="14" VerticalContentAlignment="Center"  Margin="10,5,10,10">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <TextBlock Margin="50,0,0,0" FontSize="16" Foreground="#536872" Text="Аудиториянын аталышы"/>
+                        <TextBox x:Name="TextHead" Width="600" Height="30" Foreground="#536872" FontSize="14" VerticalContentAlignment="Center"  Margin="10,5,10,10">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <TextBlock Margin="50,0,0,0" Foreground="#536872" FontSize="16" Text="Аудитория жөнүндө маалымат"/>
+                        <TextBox x:Name="TextInformation" Width="600" Foreground="#536872"  Margin="10,5,10,10" TextWrapping="Wrap" Height="110">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem >
+                <TabItem.Header >
+
+                    <TextBlock Margin="3" Width="30" TextAlignment="Center">RU</TextBlock>
+                    
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel >
+                        <TextBlock Margin="50,10,0,0" FontSize="16" Foreground="#536872" Text="Номер аудитории"/>
+                        <TextBox x:Name="TextNumer2" Width="600" Height="30" Foreground="#536872" FontSize="14" VerticalContentAlignment="Center"  Margin="10,5,10,10">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <TextBlock Margin="50,0,0,0" FontSize="16" Foreground="#536872" Text="Введите названия аудитории"/>
+                        <TextBox x:Name="TextHead2" Width="600" Height="30" Foreground="#536872" FontSize="14" VerticalContentAlignment="Center"  Margin="10,5,10,10">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <TextBlock Margin="50,0,0,0" Foreground="#536872" FontSize="16" Text="Введите информация об аудитории"/>
+                        <TextBox x:Name="TextInformation2" Width="600" Foreground="#536872"  Margin="10,5,10,10" TextWrapping="Wrap" Height="110">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+        <Button Click="Button_Click"  BorderThickness="0" 
+                Content="Добавить данные" FontSize="16"
+                 Height="45" Width="150"/>
+            <Button Click="Button_Click2" Margin="20,0,0,0"  BorderThickness="0" 
+                Content="Закрыть" FontSize="16"
+                 Height="45" Width="150"/>
+        </StackPanel>
+    </Grid>
+</Window>

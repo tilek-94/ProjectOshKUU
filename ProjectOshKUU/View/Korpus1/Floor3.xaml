@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="ProjectOshKUU.View.Korpus1.Floor3"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectOshKUU.View.Korpus1"
+      xmlns:vm="clr-namespace:OshKUU.ViewModels"
+      mc:Ignorable="d">
+
+
+    <Grid  Background="#EDF1F4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"  />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="100" />
+
+
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <!--Панель левый-->
+        <StackPanel Grid.Column="0" Grid.RowSpan="3">
+            <Border Background="White" Margin="10"  CornerRadius="10" >
+                <ItemsControl  x:Name="MyItems"  
+                           HorizontalAlignment="Left"
+                           ItemsSource="{Binding AudienceNameList, UpdateSourceTrigger=PropertyChanged}" 
+                           Margin="10" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel  />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Width="450" Margin="0,0,0,0" 
+                                BorderBrush="#838996"
+                                BorderThickness="0,0,0,2"
+                                Background="White"
+                                Height="35" 
+                                HorizontalContentAlignment="Left"
+                                Tag="{Binding Number}"
+                                Click="Button_Click"
+                                CommandParameter="{Binding Number}"
+                                Command="{Binding ElementName=MyItems,  Path=DataContext.ButtonInfoCommand}" >
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock Margin="20,0,0,0" HorizontalAlignment="Left"   FontSize="16"   Foreground="#464646" Text="{Binding NumberAudit}"/>
+                                    <TextBlock HorizontalAlignment="Left"   FontSize="16"   Text="   "/>
+                                    <TextBlock HorizontalAlignment="Left"  FontSize="16"   Foreground="#464646" Text="{Binding Name}"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+
+                </ItemsControl>
+            </Border>
+
+        </StackPanel>
+
+        <Border Background="White" Grid.Row="0" Grid.Column="2" Height="230" CornerRadius="10,0,0,0" VerticalAlignment="Bottom">
+            <StackPanel>
+                <Button x:Name="btn1"  Style="{StaticResource ButtonGrayFLat}" HorizontalAlignment="Left"  Width="95" Margin="5,5,0,0" Height="85"></Button>
+                <StackPanel Orientation="Horizontal" Height="130" Margin="5" VerticalAlignment="Bottom">
+                    <Button x:Name="btn2" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="0,5,0,0" Height="130"></Button>
+                    <Button x:Name="btn3" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="5,5,0,0" Height="130"></Button>
+                    <Button x:Name="btn4" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="5,5,0,0" Height="130"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <Border Background="White" Grid.Row="0" Grid.Column="3" Margin="0,70,0,0"  Height="100" VerticalAlignment="Top"  CornerRadius="0,10,10,0" >
+            <Image Source="/Image/icon2.png" Margin="0,0,20,0"/>
+        </Border>
+
+        <Border Grid.Row="1" Height="310" VerticalAlignment="Top" Margin="22,0,0,0" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="10,0,10,10" Background="White">
+            <StackPanel Margin="5" >
+                <!--Каридордун жогорку болугу-->
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Image/t2.png" Width="80" Margin="-10,5,-8,0" Height="110"/>
+                    <Button Click="btn1_Click" x:Name="btn5" Style="{StaticResource ButtonGrayFLat}" Uid="107" Width="70" Margin="0,5,0,0" Height="110"/>
+
+
+                    <Border     Background="White" Uid="108" Width="40" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn6" Style="{StaticResource ButtonGrayFLat}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn7" Style="{StaticResource ButtonGrayFLat}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn8" Style="{StaticResource ButtonGrayFLat}" Uid="205"   Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn9" Style="{StaticResource ButtonGrayFLat}" Uid="207"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn10" Style="{StaticResource ButtonGrayFLat}" Uid="210"  Width="80" Margin="5,5,0,0" Height="110"/>
+
+                    <Image Source="/Image/t2.png" Width="90" Margin="-10,5,-12,0" Height="110"/>
+                    <Border Background="White" Width="20" Margin="0,5,0,0" Height="110"></Border>
+                    <Image Source="/Image/t2.png" Width="90" Margin="-10,5,-12,0" Height="110"/>
+                    <Button x:Name="btn11" Style="{StaticResource ButtonGrayFLat}" Uid=""  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn12" Style="{StaticResource ButtonGrayFLat}" Uid="212"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn13" Style="{StaticResource ButtonGrayFLat}" Uid="214"   Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn14" Style="{StaticResource ButtonGrayFLat}" Uid="215 б"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn15" Style="{StaticResource ButtonGrayFLat}" Uid="215 а"  Width="80" Margin="5,5,0,0" Height="110"/>
+
+
+
+                </StackPanel>
+                <!--Ортонку бөлүм стрелка чыгуу эшиги-->
+                <StackPanel Orientation="Horizontal" >
+                    <Image Width="50" Source="/Image/e1.png" Margin="10" HorizontalAlignment="Left"/>
+                    <StackPanel Margin="80,0,0,0" Orientation="Horizontal" >
+
+                        <Border Background="White" Margin="5,0,0,0" Width="30" Height="10"/>
+
+
+                    </StackPanel>
+                </StackPanel>
+                <!--Каридордун төмөнкү болугу-->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <Button x:Name="btn16" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="70" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn17" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="100" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn18" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn19" Style="{StaticResource ButtonGrayFLat}" Uid="204" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn20" Style="{StaticResource ButtonGrayFLat}" Uid="206" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn21" Style="{StaticResource ButtonGrayFLat}" Uid="208" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn22" Style="{StaticResource ButtonGrayFLat}" Uid="209" Width="80" Margin="5,0,0,0" Height="110"/>
+
+                    <Border Background="White" Width="155" Margin="0,0,0,0" Height="115">
+
+
+                    </Border>
+                    <Button x:Name="btn23" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn24" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn25" Style="{StaticResource ButtonGrayFLat}" Uid="2011" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn26" Style="{StaticResource ButtonGrayFLat}" Uid="213" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn27" Style="{StaticResource ButtonGrayFLat}" Uid="216" Width="80" Margin="5,0,0,0" Height="110"/>
+
+
+
+
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <StackPanel  Grid.Row="2" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="50" Orientation="Horizontal" >
+            <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="library" Style="{DynamicResource ButtonIconLibrary}" Uid="{Binding LabrName}"  Margin="10"  Width="130" Height="80" ></Button>
+            <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="Restaurant" Style="{DynamicResource ButtonIconRestaurant}" Uid="{Binding Restorant}" Margin="10"  Width="130" Height="80" ></Button>
+            <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="SingleWindow" Style="{DynamicResource ButtonIconSigleWindow}" Uid="{Binding SingleWindow}" Margin="10"  Width="130" Height="80" ></Button>
+            <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="toilet" Style="{DynamicResource ButtonIconTilet}" Uid="{Binding NameToilet}" Margin="10"  Width="130" Height="80" ></Button>
+            <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="Map" Style="{DynamicResource ButtonIconMap}" Margin="10" Uid="{Binding Location}"  Width="130" Height="80" ></Button>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

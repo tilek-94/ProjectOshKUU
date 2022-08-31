@@ -1,0 +1,19 @@
+﻿<Window x:Class="ProjectOshKUU.View.WindowsPanel.LoadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectOshKUU.View.WindowsPanel"
+        mc:Ignorable="d"
+        Title="LoadWindow"
+        Background="{x:Null}"
+        Loaded="Window_Loaded"  WindowState="Normal"  AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen"  Height="130" Width="130">
+    <Grid>
+        <Border CornerRadius="5" BorderThickness="5,1,5,1" BorderBrush="#4169E1" Background="White">
+            
+            <Image x:Name="imageAwesome" Grid.Column="1" Margin="-50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+            </Image>
+        </Border>
+    </Grid>
+</Window>

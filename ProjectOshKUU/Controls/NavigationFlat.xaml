@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="ProjectOshKUU.Controls.NavigationFlat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjectOshKUU.Controls"
+             mc:Ignorable="d"  >
+    <Grid>
+        <StackPanel Orientation="Horizontal" >
+            <Button Click="Button_Click_2"
+                Style="{DynamicResource ButtonIconLibrary}" Margin="10"  Width="130" Height="80" ></Button>
+            <Button x:Name="btn2" Click="Button_Click_1" Style="{DynamicResource ButtonIconTilet}" Uid="" Margin="10"  Width="130" Height="80" ></Button>
+            <Button Style="{DynamicResource ButtonIconRestaurant}" Margin="10"  Width="130" Height="80" ></Button>
+            <Button Click="Button_Click" Style="{DynamicResource ButtonIconSigleWindow}" Margin="10"  Width="130" Height="80" ></Button>
+            <Button Click="Button_Click" Style="{DynamicResource ButtonIconMap}" Margin="10"  Width="130" Height="80" ></Button>
+           
+          </StackPanel>
+    </Grid>
+</UserControl>

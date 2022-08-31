@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="ProjectOshKUU.View.Korpus1.ContentWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:VM="clr-namespace:ProjectOshKUU.ViewModels"
+      mc:Ignorable="d"  >
+
+    <Grid Background="#EDF1F4">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <!--Шапка программа-->
+        <Grid Margin="0,0,0,0" Grid.Column="0" Background="White" Grid.ColumnSpan="2"  >
+            <Image Source="/Image/Logo.png" HorizontalAlignment="Left" />
+            <StackPanel Margin="100,20,0,0" HorizontalAlignment="Left">
+                <TextBlock Text="{Binding NameFaculty,UpdateSourceTrigger=PropertyChanged}" Foreground="#464646" FontSize="25" FontWeight="Bold"/>
+                <!--<TextBlock Text="им. Батыралы Сыддыкова" Foreground="#464646" FontSize="25" />-->
+
+            </StackPanel>
+            <!--Click="Button_Click_2"-->
+            <Button Command="{Binding ButtonCallWindowCommand}"  HorizontalAlignment="Right" Margin="0,0,150,0" Background="{x:Null}" Height="55" BorderThickness="0"  >
+                <Border  CornerRadius="3"  Background="#4B86FA" Height="50" Width="350" >
+                    <TextBlock Text="Учебный корпус №1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Foreground="White"/>
+                </Border>
+            </Button>
+            <Button Click="Button_Click_2"  Cursor="Hand" Content="Доступ" FontSize="30" Foreground="White" HorizontalAlignment="Right" Margin="0,0,0,0" Background="{x:Null}" Height="55" Width="120" BorderThickness="0"  >
+                
+            </Button>
+
+        </Grid>
+        <!--Контент программа-->
+        <Grid  Grid.Column="0"  Grid.Row="1"  Background="AliceBlue">
+            <!--<Frame x:Name="GlavGrid" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch"/>-->
+            <ContentControl Grid.Row="1" Content="{Binding CurrentPage}"/>
+        </Grid>
+        <!--Этаж программа-->
+        <StackPanel Grid.Row="1"  Grid.Column="1" Margin="0,150,0,0">
+
+            <Button  x:Name="btn4"
+                  Command="{Binding ButtonInfoCommand}"
+                    CommandParameter="4"
+                     Click="btn4_Click"
+                     Margin="5"  Style="{DynamicResource ButtonFloor}" Uid="4"  Width="100" Height="110"/>
+            <!--CommandParameter="{x:Static nav:ViewType.FirstFloor}"-->
+            <Button x:Name="btn3" Click="btn3_Click"
+                    Command="{Binding ButtonInfoCommand}"
+                    CommandParameter="3"
+                    Margin="5" Style="{DynamicResource ButtonFloor}" Uid="3"  Width="100" Height="110"/>
+            <Button  x:Name="btn2" Click="btn2_Click"
+                     Command="{Binding ButtonInfoCommand}"
+                    CommandParameter="2"
+                      Margin="5" Style="{DynamicResource ButtonFloor}" Uid="2"  Width="100" Height="110"/>
+            <Button  Command="{Binding ButtonInfoCommand}" Click="btn1_Click"
+                     CommandParameter="1" 
+                      x:Name="btn1"    Margin="5" Width="100" Height="110" Style="{DynamicResource ButtonFloorRed}" Uid="1"/>
+            <Button x:Name="btn0" Click="btn0_Click"
+                    Command="{Binding ButtonInfoCommand}"
+                    CommandParameter="0"
+                    Width="100" Height="110"  Margin="5" Style="{DynamicResource ButtonFloor}" Uid="-1"/>
+
+            <Button Click="Button_Click_1" Command="{Binding ButtonLangCommand}"  Style="{DynamicResource ButtonKG}" Margin="0,20,0,5" Width="80" Height="80"  />
+            <Button Click="Button_Click" Command="{Binding ButtonLangCommand}"  Style="{DynamicResource ButtonRU}" Width="80" Height="80"  />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

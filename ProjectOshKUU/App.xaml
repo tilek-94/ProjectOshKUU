@@ -1,0 +1,41 @@
+﻿<Application x:Class="ProjectOshKUU.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ProjectOshKUU"
+             xmlns:VM="clr-namespace:ProjectOshKUU.ViewModels"
+             xmlns:KorpusVM="clr-namespace:ProjectOshKUU.ViewModels.Korpus1VM"
+             xmlns:views="clr-namespace:ProjectOshKUU.View.Korpus1"
+             xmlns:views2="clr-namespace:ProjectOshKUU.View.Korpus2"
+           
+             
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Style/ButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type VM:ContentVM}">
+                <views:ContentWindow/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:ContentVM2}">
+                <views2:ContentWindowKor2/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor1VM}">
+                <views:Floor1/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor2VM}">
+                <views:Floor2/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor0VM}">
+                <views:Floor0/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor3VM}">
+                <views:Floor3/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor4VM}">
+                <views:Floor4/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
