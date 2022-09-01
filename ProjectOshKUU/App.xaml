@@ -4,8 +4,12 @@
              xmlns:local="clr-namespace:ProjectOshKUU"
              xmlns:VM="clr-namespace:ProjectOshKUU.ViewModels"
              xmlns:KorpusVM="clr-namespace:ProjectOshKUU.ViewModels.Korpus1VM"
+             xmlns:KorpusVM3="clr-namespace:ProjectOshKUU.ViewModels.Korpus3VM"
              xmlns:views="clr-namespace:ProjectOshKUU.View.Korpus1"
              xmlns:views2="clr-namespace:ProjectOshKUU.View.Korpus2"
+             xmlns:Korpus3="clr-namespace:ProjectOshKUU.View.Korpus3"
+             xmlns:views3="clr-namespace:ProjectOshKUU.View"
+             xmlns:views4="clr-namespace:ProjectOshKUU.View.WindowsPanel"
            
              
              StartupUri="View/MainWindow.xaml">
@@ -14,13 +18,34 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="View/Style/ButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <!--Негизги бет-->
+            <DataTemplate DataType="{x:Type VM:MainContentVM}">
+                <views3:MainContent/>
+            </DataTemplate>
+            
+            <!--1-корпус-->
             <DataTemplate DataType="{x:Type VM:ContentVM}">
                 <views:ContentWindow/>
             </DataTemplate>
+            <!--2-корпус-->
             <DataTemplate DataType="{x:Type VM:ContentVM2}">
                 <views2:ContentWindowKor2/>
             </DataTemplate>
-            
+            <!--3-корпус-->
+            <DataTemplate DataType="{x:Type VM:ContentVM3}">
+                <Korpus3:ContentWindowKor3/>
+            </DataTemplate>
+
+            <!--Университеттин сайты-->
+            <DataTemplate DataType="{x:Type VM:SaitUniversitetVM}">
+                <views4:SaitUniversitet/>
+            </DataTemplate>
+            <!--AVN browser-->
+            <DataTemplate DataType="{x:Type VM:AvnBrowserVM}">
+                <views4:AvnBrowser/>
+            </DataTemplate>
+
+            <!--1-корпус этаждары-->
             <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor1VM}">
                 <views:Floor1/>
             </DataTemplate>
@@ -36,6 +61,13 @@
             <DataTemplate DataType="{x:Type  KorpusVM:Korpus1Floor4VM}">
                 <views:Floor4/>
             </DataTemplate>
+            <!-- End 1-корпус этаждары-->
+            <!--3-корпус этаждары-->
+            <DataTemplate DataType="{x:Type  KorpusVM3:Korpus3Floor1VM}">
+                <Korpus3:Floor1Kor3/>
+            </DataTemplate>
+           
+            <!-- End 3-корпус этаждары-->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

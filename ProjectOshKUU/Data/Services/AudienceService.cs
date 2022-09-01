@@ -17,9 +17,9 @@ namespace ProjectOshKUU.Data.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<Audience>> GetByLangAsync(int floor,string lang)
+        public async Task<IEnumerable<Audience>> GetByLangAsync(int floor, int building, string lang)
         {
-            return await _context.Audience.Where(x => x.Lang == lang && x.Floor==floor).ToListAsync();
+            return await _context.Audience.Where(x => x.Lang == lang && x.Floor==floor && x.Building == building).ToListAsync();
         }
 
         public async Task<Audience> GetFirstOrDefaultAsync(int floor, int building, int number,string lang)

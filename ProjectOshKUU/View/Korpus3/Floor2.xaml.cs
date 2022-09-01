@@ -1,29 +1,25 @@
 ﻿using OshKUU.ViewModels;
-using ProjectOshKUU.ViewModels;
 using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Threading;
 
-namespace ProjectOshKUU.View.Korpus1
+namespace ProjectOshKUU.View.Korpus3
 {
     /// <summary>
-    /// Логика взаимодействия для Floor1.xaml
+    /// Логика взаимодействия для Floor2.xaml
     /// </summary>
-    public partial class Floor1 : UserControl
-    {  
-        Button btn; 
+    public partial class Floor2Kor3 : UserControl
+    {
+        Button btn;
         public int Id { get; set; }
-           public Floor1()
+        public Floor2Kor3()
         {
-            btn= new();
-           
+            btn = new();
+
             InitializeComponent();
         }
-    
-        public  void MethodEvendHandler(int x)
+
+        public void MethodEvendHandler(int x)
         {
             StyleButton();
             switch (x)
@@ -140,6 +136,11 @@ namespace ProjectOshKUU.View.Korpus1
             btn25.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn26.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
             
         }
 
@@ -149,25 +150,7 @@ namespace ProjectOshKUU.View.Korpus1
         {
             Button button = sender as Button;
             MethodEvendHandler(Convert.ToInt16(button.Tag));
-            StaticTimerClass.btn=btn;
-            StaticTimerClose.count = 0;
-            
-        }
-
-        private void Button_Click1(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("123");
-        }
-
-        private void Button_Click3(object sender, RoutedEventArgs e)
-        {
-           /* WebBrowsers webBrowsers = new WebBrowsers("https://goo.gl/maps/ERkXv2ZwYFvvGR7U8");
-            webBrowsers.ShowDialog();*/
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            //StaticLanguageClass.DelegateMethod();
+            StaticTimerClass.btn = btn;
         }
     }
 }

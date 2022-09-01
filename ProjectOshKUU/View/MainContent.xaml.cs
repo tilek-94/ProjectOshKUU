@@ -1,6 +1,4 @@
-﻿using OshKUU.ViewModels;
-using ProjectOshKUU.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProjectOshKUU
+namespace ProjectOshKUU.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для MainContent.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainContent : UserControl
     {
-        public MainWindow()
+        public MainContent()
         {
             InitializeComponent();
-            StaticTimerClass.TimerMethod();
-            StaticTimerClose.StaticMethodTimerClose();
         }
     }
 }

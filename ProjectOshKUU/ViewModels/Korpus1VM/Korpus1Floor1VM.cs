@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ProjectOshKUU.ViewModels.Korpus1VM
@@ -35,11 +36,14 @@ namespace ProjectOshKUU.ViewModels.Korpus1VM
         }
         private void SelectRoomMethod(object obj)
         {
+            StaticTimerClose.count = 0;
+            
             StaticLanguageClass.SelectRoomMethod(obj.ToString());
-
+            //Number1 = StaticTimerClose.count.ToString();
         }
         private void CommandMethod(object NumberFlat)
         {
+            StaticTimerClose.count = 0;
             if (StaticLanguageClass.AccessAccount == true)
             {
                 AddInformationWindow addInformationWindow = new(1, 1, Convert.ToInt16(NumberFlat), new AudienceService(new AppDbContext()));
@@ -60,7 +64,8 @@ namespace ProjectOshKUU.ViewModels.Korpus1VM
         }
         private void ShowMapMethod(object obj)
         {
-            WebBrowsers webBrowsers = new WebBrowsers("https://goo.gl/maps/ERkXv2ZwYFvvGR7U8");
+            //WebBrowsers webBrowsers = new WebBrowsers("https://goo.gl/maps/ERkXv2ZwYFvvGR7U8");
+            WebBrowsers webBrowsers = new WebBrowsers("https://kuu.kg/");
             webBrowsers.ShowDialog();
 
         }
@@ -95,7 +100,7 @@ namespace ProjectOshKUU.ViewModels.Korpus1VM
         {
             await Task.Run(async () =>
             {
-                AudienceNameList = await _service.GetByLangAsync(1, StaticLanguageClass.Lang);
+                AudienceNameList = await _service.GetByLangAsync(1,1, StaticLanguageClass.Lang);
                 Number1 = AudienceNameList.Where(x => x.Number == 1).Select(t => t.NumberAudit).FirstOrDefault();
                 Number2 = AudienceNameList.Where(x => x.Number == 2).Select(t => t.NumberAudit).FirstOrDefault();
                 Number3 = AudienceNameList.Where(x => x.Number == 3).Select(t => t.NumberAudit).FirstOrDefault();

@@ -32,5 +32,11 @@ namespace ProjectOshKUU.View.WindowsPanel
             StaticLanguageClass.SelectBuildingMethod("2");
             this.Close();
         }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            StaticLanguageClass.SelectBuildingMethod("3");
+            this.Close();
+        }
     }
 }

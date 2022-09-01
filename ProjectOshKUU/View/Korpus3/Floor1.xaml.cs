@@ -7,16 +7,16 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
-namespace ProjectOshKUU.View.Korpus1
+namespace ProjectOshKUU.View.Korpus3
 {
     /// <summary>
     /// Логика взаимодействия для Floor1.xaml
     /// </summary>
-    public partial class Floor1 : UserControl
+    public partial class Floor1Kor3 : UserControl
     {  
         Button btn; 
         public int Id { get; set; }
-           public Floor1()
+           public Floor1Kor3()
         {
             btn= new();
            

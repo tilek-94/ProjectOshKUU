@@ -4,6 +4,7 @@ using ProjectOshKUU.Data;
 using ProjectOshKUU.Data.Services;
 using ProjectOshKUU.View.WindowsPanel;
 using ProjectOshKUU.ViewModels.Korpus1VM;
+using ProjectOshKUU.ViewModels.Korpus3VM;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,19 +13,19 @@ using System.Windows.Input;
 
 namespace ProjectOshKUU.ViewModels
 {
-    public class ContentVM : BaseView
+    public class ContentVM3 : BaseView
     {
         public ICommand? ButtonInfoCommand { get; set; }
         public ICommand? ButtonLangCommand { get; set; }
         public ICommand? ButtonCallWindowCommand { get; set; }
         private bool CanCloseApplicationExecat(object arg) => true;
-        public ContentVM()
+        public ContentVM3()
         {
-            CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()));
+            CurrentPage = new Korpus3Floor1VM(new AudienceService(new AppDbContext()));
             ButtonInfoCommand = new RelayCommand(CommandMethod, CanCloseApplicationExecat);
             ButtonLangCommand = new RelayCommand(ContentMethod, CanCloseApplicationExecat);
             ButtonCallWindowCommand = new RelayCommand(CallWindowMethod, CanCloseApplicationExecat);
-            StaticLanguageClass.SelectRoomDelegate -= x => selectRoomMethod(x); 
+            StaticLanguageClass.SelectRoomDelegate -= x => selectRoomMethod(x);
             StaticLanguageClass.SelectRoomDelegate += x => selectRoomMethod(x);
 
 
@@ -33,7 +34,7 @@ namespace ProjectOshKUU.ViewModels
         {
             OsPanel osPanel = new OsPanel();
             osPanel.ShowDialog();
-            
+
         }
         private void selectRoomMethod(string room)
         {
@@ -42,23 +43,23 @@ namespace ProjectOshKUU.ViewModels
             {
                 case "toilet":
                     CurrentPage = new Korpus1Floor0VM(new AudienceService(new AppDbContext()));
-                    
+
                     break;
                 case "library":
                     CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()));
-                   
+
                     break;
                 case "Restaurant":
                     CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()));
-                   
+
                     break;
                 case "SingleWindow":
                     CurrentPage = new Korpus1Floor3VM(new AudienceService(new AppDbContext()));
-                   
+
                     break;
                 case "Map":
                     CurrentPage = new Korpus1Floor4VM(new AudienceService(new AppDbContext()));
-                  
+
                     break;
                 default:
                     break;
@@ -107,7 +108,7 @@ namespace ProjectOshKUU.ViewModels
                     CurrentPage = new Korpus1Floor0VM(new AudienceService(new AppDbContext()));
                     break;
                 case 1:
-                    CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus3Floor1VM(new AudienceService(new AppDbContext()));
                     break;
                 case 2:
                     CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()));
