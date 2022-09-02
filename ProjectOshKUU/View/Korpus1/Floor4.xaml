@@ -9,6 +9,7 @@
 
 
     <Grid  Background="#EDF1F4">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="2*"  />
@@ -25,6 +26,8 @@
 
         </Grid.RowDefinitions>
         <!--Панель левый-->
+        <!--CommandParameter="{Binding Number}"
+                                Command="{Binding ElementName=MyItems,  Path=DataContext.ButtonInfoCommand}"-->
         <StackPanel Grid.Column="0" Grid.RowSpan="3">
             <Border Background="White" Margin="10"  CornerRadius="10" >
                 <ItemsControl  x:Name="MyItems"  
@@ -46,8 +49,7 @@
                                 HorizontalContentAlignment="Left"
                                 Tag="{Binding Number}"
                                 Click="Button_Click"
-                                CommandParameter="{Binding Number}"
-                                Command="{Binding ElementName=MyItems,  Path=DataContext.ButtonInfoCommand}" >
+                               >
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
                                     <TextBlock Margin="20,0,0,0" HorizontalAlignment="Left"   FontSize="16"   Foreground="#464646" Text="{Binding NumberAudit}"/>
                                     <TextBlock HorizontalAlignment="Left"   FontSize="16"   Text="   "/>
@@ -65,11 +67,11 @@
 
         <Border Background="White" Grid.Row="0" Grid.Column="2" Height="230" CornerRadius="10,0,0,0" VerticalAlignment="Bottom">
             <StackPanel>
-                <Button x:Name="btn1"  Style="{StaticResource ButtonGrayFLat}" HorizontalAlignment="Left"  Width="95" Margin="5,5,0,0" Height="85"></Button>
+                <Button x:Name="btn1" Command="{Binding ButtonInfoCommand}" CommandParameter="1" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number1}" HorizontalAlignment="Left"  Width="95" Margin="5,5,0,0" Height="85"></Button>
                 <StackPanel Orientation="Horizontal" Height="130" Margin="5" VerticalAlignment="Bottom">
-                    <Button x:Name="btn2" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="0,5,0,0" Height="130"></Button>
-                    <Button x:Name="btn3" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="5,5,0,0" Height="130"></Button>
-                    <Button x:Name="btn4" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="5,5,0,0" Height="130"></Button>
+                    <Button x:Name="btn2" Uid="{Binding Number2}" Command="{Binding ButtonInfoCommand}" CommandParameter="2" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="0,5,0,0" Height="130"></Button>
+                    <Button x:Name="btn3" Uid="{Binding Number3}" Command="{Binding ButtonInfoCommand}" CommandParameter="3" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="5,5,0,0" Height="130"></Button>
+                    <Button x:Name="btn4" Uid="{Binding Number4}" Command="{Binding ButtonInfoCommand}" CommandParameter="4" Style="{StaticResource ButtonGrayFLat}" Width="95" Margin="5,5,0,0" Height="130"></Button>
                 </StackPanel>
             </StackPanel>
         </Border>
@@ -82,24 +84,22 @@
                 <!--Каридордун жогорку болугу-->
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Image/t2.png" Width="80" Margin="-10,5,-8,0" Height="110"/>
-                    <Button Click="btn1_Click" x:Name="btn5" Style="{StaticResource ButtonGrayFLat}" Uid="107" Width="70" Margin="0,5,0,0" Height="110"/>
-
-
-                    <Border     Background="White" Uid="108" Width="40" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn6" Style="{StaticResource ButtonGrayFLat}"  Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn7" Style="{StaticResource ButtonGrayFLat}"  Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn8" Style="{StaticResource ButtonGrayFLat}" Uid="205"   Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn9" Style="{StaticResource ButtonGrayFLat}" Uid="207"  Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn10" Style="{StaticResource ButtonGrayFLat}" Uid="210"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button Command="{Binding ButtonInfoCommand}" CommandParameter="5" x:Name="btn5" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number5}" Width="70" Margin="0,5,0,0" Height="110"/>
+                    <Border     Background="White"  Width="40" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn6" Command="{Binding ButtonInfoCommand}" CommandParameter="6" Style="{StaticResource ButtonGrayFLat}"  Uid="{Binding Number6}" Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn7" Command="{Binding ButtonInfoCommand}" CommandParameter="7" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number7}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn8" Command="{Binding ButtonInfoCommand}" CommandParameter="8" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number8}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn9" Command="{Binding ButtonInfoCommand}" CommandParameter="9" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number9}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn10" Command="{Binding ButtonInfoCommand}" CommandParameter="10" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number10}"  Width="80" Margin="5,5,0,0" Height="110"/>
 
                     <Image Source="/Image/t2.png" Width="90" Margin="-10,5,-12,0" Height="110"/>
                     <Border Background="White" Width="20" Margin="0,5,0,0" Height="110"></Border>
                     <Image Source="/Image/t2.png" Width="90" Margin="-10,5,-12,0" Height="110"/>
-                    <Button x:Name="btn11" Style="{StaticResource ButtonGrayFLat}" Uid=""  Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn12" Style="{StaticResource ButtonGrayFLat}" Uid="212"  Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn13" Style="{StaticResource ButtonGrayFLat}" Uid="214"   Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn14" Style="{StaticResource ButtonGrayFLat}" Uid="215 б"  Width="80" Margin="5,5,0,0" Height="110"/>
-                    <Button x:Name="btn15" Style="{StaticResource ButtonGrayFLat}" Uid="215 а"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn11" Command="{Binding ButtonInfoCommand}" CommandParameter="11" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number11}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn12" Command="{Binding ButtonInfoCommand}" CommandParameter="12" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number12}"  Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn13"  Command="{Binding ButtonInfoCommand}" CommandParameter="13" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number13}"   Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn14" Command="{Binding ButtonInfoCommand}" CommandParameter="14" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number14}" Width="80" Margin="5,5,0,0" Height="110"/>
+                    <Button x:Name="btn15" Command="{Binding ButtonInfoCommand}" CommandParameter="15" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number15}" Width="80" Margin="5,5,0,0" Height="110"/>
 
 
 
@@ -116,23 +116,23 @@
                 </StackPanel>
                 <!--Каридордун төмөнкү болугу-->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                    <Button x:Name="btn16" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="70" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn17" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="100" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn18" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn19" Style="{StaticResource ButtonGrayFLat}" Uid="204" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn20" Style="{StaticResource ButtonGrayFLat}" Uid="206" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn21" Style="{StaticResource ButtonGrayFLat}" Uid="208" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn22" Style="{StaticResource ButtonGrayFLat}" Uid="209" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn16" Command="{Binding ButtonInfoCommand}" CommandParameter="16" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number16}" Width="70" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn17" Command="{Binding ButtonInfoCommand}" CommandParameter="17" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number17}" Width="100" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn18" Command="{Binding ButtonInfoCommand}" CommandParameter="18" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number18}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn19" Command="{Binding ButtonInfoCommand}" CommandParameter="19" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number19}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn20" Command="{Binding ButtonInfoCommand}" CommandParameter="20" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number20}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn21" Command="{Binding ButtonInfoCommand}" CommandParameter="21" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number21}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn22" Command="{Binding ButtonInfoCommand}" CommandParameter="22" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number22}" Width="80" Margin="5,0,0,0" Height="110"/>
 
                     <Border Background="White" Width="155" Margin="0,0,0,0" Height="115">
 
 
                     </Border>
-                    <Button x:Name="btn23" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn24" Style="{StaticResource ButtonGrayFLat}" Uid="" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn25" Style="{StaticResource ButtonGrayFLat}" Uid="2011" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn26" Style="{StaticResource ButtonGrayFLat}" Uid="213" Width="80" Margin="5,0,0,0" Height="110"/>
-                    <Button x:Name="btn27" Style="{StaticResource ButtonGrayFLat}" Uid="216" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn23" Command="{Binding ButtonInfoCommand}" CommandParameter="23" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number23}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn24" Command="{Binding ButtonInfoCommand}" CommandParameter="24" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number24}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn25" Command="{Binding ButtonInfoCommand}" CommandParameter="25" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number25}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn26" Command="{Binding ButtonInfoCommand}" CommandParameter="26" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number26}" Width="80" Margin="5,0,0,0" Height="110"/>
+                    <Button x:Name="btn27" Command="{Binding ButtonInfoCommand}" CommandParameter="27" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number27}" Width="80" Margin="5,0,0,0" Height="110"/>
 
 
 
@@ -140,12 +140,13 @@
                 </StackPanel>
             </StackPanel>
         </Border>
+
         <StackPanel  Grid.Row="2" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="50" Orientation="Horizontal" >
             <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="library" Style="{DynamicResource ButtonIconLibrary}" Uid="{Binding LabrName}"  Margin="10"  Width="130" Height="80" ></Button>
             <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="Restaurant" Style="{DynamicResource ButtonIconRestaurant}" Uid="{Binding Restorant}" Margin="10"  Width="130" Height="80" ></Button>
             <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="SingleWindow" Style="{DynamicResource ButtonIconSigleWindow}" Uid="{Binding SingleWindow}" Margin="10"  Width="130" Height="80" ></Button>
             <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="toilet" Style="{DynamicResource ButtonIconTilet}" Uid="{Binding NameToilet}" Margin="10"  Width="130" Height="80" ></Button>
-            <Button Command="{Binding ButtonSelectRoomCommand}" CommandParameter="Map" Style="{DynamicResource ButtonIconMap}" Margin="10" Uid="{Binding Location}"  Width="130" Height="80" ></Button>
+            <Button Command="{Binding ButtonShowMapCommand}" CommandParameter="Map" Style="{DynamicResource ButtonIconMap}" Margin="10" Uid="{Binding Location}"  Width="130" Height="80" ></Button>
 
         </StackPanel>
 

@@ -36,8 +36,7 @@ namespace ProjectOshKUU.View.Korpus3
             btn1.Style = (Style)btn1.FindResource("ButtonFloor");
             btn2.Style = (Style)btn2.FindResource("ButtonFloor");
             btn3.Style = (Style)btn2.FindResource("ButtonFloor");
-            btn4.Style = (Style)btn2.FindResource("ButtonFloor");
-            btn0.Style = (Style)btn2.FindResource("ButtonFloor");
+            
             btn.Style = (Style)btn.FindResource("ButtonFloorRed");
             StaticTimerClose.count = 0;
         }
@@ -54,11 +53,7 @@ namespace ProjectOshKUU.View.Korpus3
             StaticTimerClose.count = 0;
         }
 
-        private void btn0_Click(object sender, RoutedEventArgs e)
-        {
-            StyeleButtonFloor(btn0);
-        }
-
+        
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             StyeleButtonFloor(btn1);
@@ -69,11 +64,7 @@ namespace ProjectOshKUU.View.Korpus3
             StyeleButtonFloor(btn3);
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
-        {
-            StyeleButtonFloor(btn4);
-        }
-
+       
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             AccountWindow accountWindow = new();

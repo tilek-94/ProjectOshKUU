@@ -66,6 +66,9 @@
             <DataTemplate DataType="{x:Type  KorpusVM3:Korpus3Floor1VM}">
                 <Korpus3:Floor1Kor3/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM3:Korpus3Floor2VM}">
+                <Korpus3:Floor2Kor3/>
+            </DataTemplate>
            
             <!-- End 3-корпус этаждары-->
         </ResourceDictionary>

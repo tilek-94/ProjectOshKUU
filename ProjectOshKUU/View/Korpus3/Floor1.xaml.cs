@@ -62,7 +62,7 @@ namespace ProjectOshKUU.View.Korpus3
                     btn = btn11;
                     break;
                 case 12:
-                    btn = btn22;
+                    btn = btn12;
                     break;
                 case 13:
                     btn = btn13;
@@ -70,45 +70,45 @@ namespace ProjectOshKUU.View.Korpus3
                 case 14:
                     btn = btn14;
                     break;
-                case 15:
-                    btn = btn15;
-                    break;
-                case 16:
-                    btn = btn16;
-                    break;
-                case 17:
-                    btn = btn17;
-                    break;
-                case 18:
-                    btn = btn18;
-                    break;
-                case 19:
-                    btn = btn19;
-                    break;
-                case 20:
-                    btn = btn20;
-                    break;
-                case 21:
-                    btn = btn21;
-                    break;
-                case 22:
-                    btn = btn22;
-                    break;
-                case 23:
-                    btn = btn23;
-                    break;
-                case 24:
-                    btn = btn24;
-                    break;
-                case 25:
-                    btn = btn25;
-                    break;
-                case 26:
-                    btn = btn26;
-                    break;
-                case 27:
-                    btn = btn27;
-                    break;
+                    /*case 15:
+                        btn = btn15;
+                        break;
+                    case 16:
+                        btn = btn16;
+                        break;
+                    case 17:
+                        btn = btn17;
+                        break;
+                    case 18:
+                        btn = btn18;
+                        break;
+                    case 19:
+                        btn = btn19;
+                        break;
+                    case 20:
+                        btn = btn20;
+                        break;
+                    case 21:
+                        btn = btn21;
+                        break;
+                    case 22:
+                        btn = btn22;
+                        break;
+                    case 23:
+                        btn = btn23;
+                        break;
+                    case 24:
+                        btn = btn24;
+                        break;
+                    case 25:
+                        btn = btn25;
+                        break;
+                    case 26:
+                        btn = btn26;
+                        break;
+                    case 27:
+                        btn = btn27;
+                        break;*/
             }
         }
         public void StyleButton()
@@ -127,7 +127,7 @@ namespace ProjectOshKUU.View.Korpus3
             btn12.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn13.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn14.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn15.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+          /*  btn15.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn16.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn17.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn18.Style = (Style)btn2.FindResource("ButtonGrayFLat");
@@ -139,7 +139,7 @@ namespace ProjectOshKUU.View.Korpus3
             btn24.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn25.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn26.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");*/
             
         }
 

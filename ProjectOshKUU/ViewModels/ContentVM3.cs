@@ -111,7 +111,7 @@ namespace ProjectOshKUU.ViewModels
                     CurrentPage = new Korpus3Floor1VM(new AudienceService(new AppDbContext()));
                     break;
                 case 2:
-                    CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus3Floor2VM(new AudienceService(new AppDbContext()));
                     break;
                 case 3:
                     CurrentPage = new Korpus1Floor3VM(new AudienceService(new AppDbContext()));
