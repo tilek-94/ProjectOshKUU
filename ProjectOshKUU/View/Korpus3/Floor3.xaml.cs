@@ -57,7 +57,7 @@ namespace ProjectOshKUU.View.Korpus3
                 case 11:
                     btn = btn11;
                     break;
-                case 12:
+                /*case 12:
                     btn = btn22;
                     break;
                 case 13:
@@ -104,7 +104,7 @@ namespace ProjectOshKUU.View.Korpus3
                     break;
                 case 27:
                     btn = btn27;
-                    break;
+                    break;*/
             }
         }
         public void StyleButton()
@@ -120,7 +120,7 @@ namespace ProjectOshKUU.View.Korpus3
             btn9.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn10.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn11.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn12.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+           /* btn12.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn13.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn14.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn15.Style = (Style)btn2.FindResource("ButtonGrayFLat");
@@ -135,7 +135,7 @@ namespace ProjectOshKUU.View.Korpus3
             btn24.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn25.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn26.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");*/
 
         }
 

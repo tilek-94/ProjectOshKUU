@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ProjectOshKUU.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Security.Policy;
@@ -27,19 +29,24 @@ namespace ProjectOshKUU.View.WindowsPanel
             InitializeComponent();
             
         }
-        public void HideScriptErrors(WebBrowser wb, bool Hide)
-        {
-            FieldInfo fiComWebBrowser = typeof(WebBrowser).GetField("_axIWebBrowser2", BindingFlags.Instance | BindingFlags.NonPublic);
-            if (fiComWebBrowser == null) return;
-            object objComWebBrowser = fiComWebBrowser.GetValue(wb);
-            if (objComWebBrowser == null) return;
-            objComWebBrowser.GetType().InvokeMember("Silent", BindingFlags.SetProperty, null, objComWebBrowser, new object[] { Hide });
-        }
+       
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-          /*  Browser.Navigated += (sender, args) => { HideScriptErrors((WebBrowser)sender, true); };
-            Browser.Source = new Uri("https://program.kg/");*/
+           
+                try
+                {
+                    Process[] arrPro = Process.GetProcessesByName("ProjectOshKUU");
+                    foreach (Process pro in arrPro)
+                        pro.Kill();
+                    StaticLanguageClass.SelectBuildingMethod("main");
+                }
+                catch
+                {
+
+                }
+            
+           
         }
     }
 }

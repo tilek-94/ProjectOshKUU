@@ -1,26 +1,20 @@
 ﻿using ATB.Infrastructure.Commands;
-using OshKUU.ViewModels.BaseViewModels;
 using ProjectOshKUU.Data;
 using ProjectOshKUU.Data.Services;
 using ProjectOshKUU.View.WindowsPanel;
+using ProjectOshKUU.ViewModels.BaseViewModels;
 using ProjectOshKUU.ViewModels.Korpus1VM;
 using System;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace ProjectOshKUU.ViewModels
 {
-    public class ContentVM : BaseView
+    public class ContentVM : AbstractContent
     {
-        public ICommand? ButtonInfoCommand { get; set; }
-        public ICommand? ButtonLangCommand { get; set; }
-        public ICommand? ButtonCallWindowCommand { get; set; }
-        private bool CanCloseApplicationExecat(object arg) => true;
-        public ContentVM()
+       
+        public ContentVM() 
         {
-            CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()));
+            CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()),1,1);
             ButtonInfoCommand = new RelayCommand(CommandMethod, CanCloseApplicationExecat);
             ButtonLangCommand = new RelayCommand(ContentMethod, CanCloseApplicationExecat);
             ButtonCallWindowCommand = new RelayCommand(CallWindowMethod, CanCloseApplicationExecat);
@@ -41,23 +35,23 @@ namespace ProjectOshKUU.ViewModels
             switch (room)
             {
                 case "toilet":
-                    CurrentPage = new Korpus1Floor0VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor0VM(new AudienceService(new AppDbContext()),1,0);
                     
                     break;
                 case "library":
-                    CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()),1,1);
                    
                     break;
                 case "Restaurant":
-                    CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()),1,2);
                    
                     break;
                 case "SingleWindow":
-                    CurrentPage = new Korpus1Floor3VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor3VM(new AudienceService(new AppDbContext()),1,3);
                    
                     break;
                 case "Map":
-                    CurrentPage = new Korpus1Floor4VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor4VM(new AudienceService(new AppDbContext()),1,4);
                   
                     break;
                 default:
@@ -77,19 +71,7 @@ namespace ProjectOshKUU.ViewModels
             }
             SeectFloorMethod();
         }
-        private BaseView _currentPage;
-        public BaseView CurrentPage
-        {
-            get { return _currentPage; }
-            set { Set(ref _currentPage, value); }
-        }
-        private string _NameFaculty;
-        public string NameFaculty
-        {
-            get { return _NameFaculty; }
-            set { Set(ref _NameFaculty, value); }
-        }
-        private int floor = 1;
+        
         private async void CommandMethod(object NumberFlat)
         {
             await Task.Run(async () =>
@@ -104,19 +86,19 @@ namespace ProjectOshKUU.ViewModels
             switch (floor)
             {
                 case 0:
-                    CurrentPage = new Korpus1Floor0VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor0VM(new AudienceService(new AppDbContext()),1,0);
                     break;
                 case 1:
-                    CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor1VM(new AudienceService(new AppDbContext()),1,1);
                     break;
                 case 2:
-                    CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor2VM(new AudienceService(new AppDbContext()),1,2);
                     break;
                 case 3:
-                    CurrentPage = new Korpus1Floor3VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor3VM(new AudienceService(new AppDbContext()),1,3);
                     break;
                 case 4:
-                    CurrentPage = new Korpus1Floor4VM(new AudienceService(new AppDbContext()));
+                    CurrentPage = new Korpus1Floor4VM(new AudienceService(new AppDbContext()),1,4);
                     break;
                 default:
                     break;

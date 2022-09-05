@@ -102,11 +102,31 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Korpus3\Floor0.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Korpus3\Floor2.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Korpus3\Floor3.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Korpus6\ContentWindowKor6.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Korpus6\Floor0.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Korpus6\Floor1.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Korpus6\Floor2.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -119,11 +139,13 @@
   <ItemGroup>
     <Folder Include="View\Korpus4\" />
     <Folder Include="View\Korpus5\" />
-    <Folder Include="View\Korpus6\" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Update="View\Korpus3\ContentWindowKor3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Korpus6\ContentWindowKor6.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using OshKUU.Models;
+using View.WindowsPanel;
 
 namespace ProjectOshKUU.ViewModels
 {
@@ -45,6 +46,8 @@ namespace ProjectOshKUU.ViewModels
 
         private void CommandMethod2(object obj)
         {
+            /*SaitWindow wn = new();
+            wn.ShowDialog();*/
             StaticLanguageClass.SelectBuildingMethod("site");
         }
 

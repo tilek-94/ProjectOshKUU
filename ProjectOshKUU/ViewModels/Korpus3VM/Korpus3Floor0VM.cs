@@ -12,13 +12,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
-namespace ProjectOshKUU.ViewModels.Korpus1VM
+namespace ProjectOshKUU.ViewModels.Korpus3VM
 {
-    public class Korpus1Floor3VM : AbstractClassBase
+    public class Korpus3Floor0VM : AbstractClassBase
     {
-        public Korpus1Floor3VM(IAudienceService service, int biulding, int floor) : base(service, biulding, floor)
+        public Korpus3Floor0VM(IAudienceService service, int biulding, int floor) : base(service, biulding, floor)
         {
         }
     }

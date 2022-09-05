@@ -1,29 +1,27 @@
 ﻿using OshKUU.ViewModels.BaseViewModels;
-using ProjectOshKUU.View.Korpus1;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Threading;
 
 namespace ProjectOshKUU.ViewModels
 {
     public class MainWindowVM : BaseView
     {
-        ContentWindow contentWindow;
-        private DispatcherTimer timer = new();
+
+        private readonly DispatcherTimer timer = new();
         public MainWindowVM()
         {
-           //CurrentPage =new ContentVM();
-            CurrentPage=new MainContentVM();
+            CurrentPage = new MainContentVM();
             StaticLanguageClass.SelectBuilding -= (x) => SelectBuildingMethod(x);
             StaticLanguageClass.SelectBuilding += (x) => SelectBuildingMethod(x);
             TimerClose();
         }
-
-        public void  TimerClose()
+        private BaseView? _currentPage;
+        public BaseView? CurrentPage
+        {
+            get { return _currentPage; }
+            set { Set(ref _currentPage, value); }
+        }
+        public void TimerClose()
         {
             timer.Start();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -35,8 +33,6 @@ namespace ProjectOshKUU.ViewModels
                     timer.Stop();
                 }
             };
-           
-
         }
         private void SelectBuildingMethod(string building)
         {
@@ -45,8 +41,7 @@ namespace ProjectOshKUU.ViewModels
             switch (building)
             {
                 case "1":
-                        CurrentPage=new ContentVM();
-
+                    CurrentPage = new ContentVM();
                     break;
                 case "2":
                     CurrentPage = new ContentVM2();
@@ -54,11 +49,23 @@ namespace ProjectOshKUU.ViewModels
                 case "3":
                     CurrentPage = new ContentVM3();
                     break;
+                case "4":
+                    CurrentPage = new ContentVM4();
+                    break;
+                case "5":
+                    CurrentPage = new ContentVM5();
+                    break;
+                case "6":
+                    CurrentPage = new ContentVM6();
+                    break;
                 case "site":
                     CurrentPage = new SaitUniversitetVM();
                     break;
                 case "avn":
                     CurrentPage = new AvnBrowserVM();
+                    break;
+                case "main":
+                    CurrentPage = new MainContentVM();
                     break;
                 default:
                     break;
@@ -66,12 +73,7 @@ namespace ProjectOshKUU.ViewModels
             }
 
         }
-        private BaseView _currentPage;
-        public BaseView CurrentPage
-        {
-            get { return _currentPage; }
-            set { Set(ref _currentPage, value); }
-        }
+
 
     }
 }

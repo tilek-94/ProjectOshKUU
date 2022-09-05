@@ -1,25 +1,29 @@
 ﻿using OshKUU.ViewModels;
+using ProjectOshKUU.ViewModels;
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
-namespace ProjectOshKUU.View.Korpus1
+namespace ProjectOshKUU.View.Korpus6
 {
     /// <summary>
-    /// Логика взаимодействия для Floor2.xaml
+    /// Логика взаимодействия для Floor1.xaml
     /// </summary>
-    public partial class Floor4 : UserControl
-    {
-        Button btn;
+    public partial class Floor1Kor6 : UserControl
+    {  
+        Button btn; 
         public int Id { get; set; }
-        public Floor4()
+           public Floor1Kor6()
         {
-            btn = new();
-
+            btn= new();
+           
             InitializeComponent();
         }
-
-        public void MethodEvendHandler(int x)
+    
+        public  void MethodEvendHandler(int x)
         {
             StyleButton();
             switch (x)
@@ -60,51 +64,51 @@ namespace ProjectOshKUU.View.Korpus1
                 case 12:
                     btn = btn12;
                     break;
-                case 13:
+                /*case 13:
                     btn = btn13;
                     break;
                 case 14:
                     btn = btn14;
-                    break;
-                case 15:
-                    btn = btn15;
-                    break;
-                case 16:
-                    btn = btn16;
-                    break;
-                case 17:
-                    btn = btn17;
-                    break;
-                case 18:
-                    btn = btn18;
-                    break;
-                case 19:
-                    btn = btn19;
-                    break;
-                case 20:
-                    btn = btn20;
-                    break;
-                case 21:
-                    btn = btn21;
-                    break;
-                case 22:
-                    btn = btn22;
-                    break;
-                case 23:
-                    btn = btn23;
-                    break;
-                case 24:
-                    btn = btn24;
-                    break;
-                case 25:
-                    btn = btn25;
-                    break;
-                case 26:
-                    btn = btn26;
-                    break;
-                case 27:
-                    btn = btn27;
-                    break;
+                    break;*/
+                    /*case 15:
+                        btn = btn15;
+                        break;
+                    case 16:
+                        btn = btn16;
+                        break;
+                    case 17:
+                        btn = btn17;
+                        break;
+                    case 18:
+                        btn = btn18;
+                        break;
+                    case 19:
+                        btn = btn19;
+                        break;
+                    case 20:
+                        btn = btn20;
+                        break;
+                    case 21:
+                        btn = btn21;
+                        break;
+                    case 22:
+                        btn = btn22;
+                        break;
+                    case 23:
+                        btn = btn23;
+                        break;
+                    case 24:
+                        btn = btn24;
+                        break;
+                    case 25:
+                        btn = btn25;
+                        break;
+                    case 26:
+                        btn = btn26;
+                        break;
+                    case 27:
+                        btn = btn27;
+                        break;*/
             }
         }
         public void StyleButton()
@@ -121,9 +125,9 @@ namespace ProjectOshKUU.View.Korpus1
             btn10.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn11.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn12.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn13.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn14.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn15.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+           /* btn13.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+            btn14.Style = (Style)btn2.FindResource("ButtonGrayFLat");*/
+          /*  btn15.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn16.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn17.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn18.Style = (Style)btn2.FindResource("ButtonGrayFLat");
@@ -135,12 +139,7 @@ namespace ProjectOshKUU.View.Korpus1
             btn24.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn25.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn26.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-
-        }
-
-        private void btn1_Click(object sender, RoutedEventArgs e)
-        {
+            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");*/
             
         }
 
@@ -150,7 +149,25 @@ namespace ProjectOshKUU.View.Korpus1
         {
             Button button = sender as Button;
             MethodEvendHandler(Convert.ToInt16(button.Tag));
-            StaticTimerClass.btn = btn;
+            StaticTimerClass.btn=btn;
+            StaticTimerClose.count = 0;
+            
+        }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("123");
+        }
+
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+           /* WebBrowsers webBrowsers = new WebBrowsers("https://goo.gl/maps/ERkXv2ZwYFvvGR7U8");
+            webBrowsers.ShowDialog();*/
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //StaticLanguageClass.DelegateMethod();
         }
     }
 }

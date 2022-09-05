@@ -19,15 +19,15 @@
         <Border Background="#4B86FA"/>
         <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Row="1" Orientation="Horizontal">
             <StackPanel Margin="50,0,0,0" >
-                <Button  Click="Button_Click"
+                <Button  Click="Button_Click1"
                          Margin="0,0,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
             <Button Click="Button_Click2" Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
-            <Button Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
+                <Button Click="Button_Click3" Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
             </StackPanel>
             <StackPanel Margin="80,0,0,0" >
-                <Button Margin="0,0,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
-                <Button Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
-                <Button Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
+                <Button Click="Button_Click4" Margin="0,0,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
+                <Button Click="Button_Click5" Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
+                <Button Click="Button_Click6" Margin="0,20,0,0" Style="{StaticResource ButtonBuilding}"  Width="600"   Height="80" />
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -3,16 +3,16 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ProjectOshKUU.View.Korpus1
+namespace ProjectOshKUU.View.Korpus6
 {
     /// <summary>
     /// Логика взаимодействия для Floor2.xaml
     /// </summary>
-    public partial class Floor4 : UserControl
+    public partial class Floor2Kor6 : UserControl
     {
         Button btn;
         public int Id { get; set; }
-        public Floor4()
+        public Floor2Kor6()
         {
             btn = new();
 
@@ -45,7 +45,7 @@ namespace ProjectOshKUU.View.Korpus1
                 case 7:
                     btn = btn7;
                     break;
-                case 8:
+                /*case 8:
                     btn = btn8;
                     break;
                 case 9:
@@ -71,8 +71,8 @@ namespace ProjectOshKUU.View.Korpus1
                     break;
                 case 16:
                     btn = btn16;
-                    break;
-                case 17:
+                    break;*/
+                /*case 17:
                     btn = btn17;
                     break;
                 case 18:
@@ -104,7 +104,7 @@ namespace ProjectOshKUU.View.Korpus1
                     break;
                 case 27:
                     btn = btn27;
-                    break;
+                    break;*/
             }
         }
         public void StyleButton()
@@ -116,7 +116,7 @@ namespace ProjectOshKUU.View.Korpus1
             btn5.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn6.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn7.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn8.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+            /*btn8.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn9.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn10.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn11.Style = (Style)btn2.FindResource("ButtonGrayFLat");
@@ -124,8 +124,8 @@ namespace ProjectOshKUU.View.Korpus1
             btn13.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn14.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn15.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn16.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn17.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+            btn16.Style = (Style)btn2.FindResource("ButtonGrayFLat");*/
+           /* btn17.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn18.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn19.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn20.Style = (Style)btn2.FindResource("ButtonGrayFLat");
@@ -135,15 +135,11 @@ namespace ProjectOshKUU.View.Korpus1
             btn24.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn25.Style = (Style)btn2.FindResource("ButtonGrayFLat");
             btn26.Style = (Style)btn2.FindResource("ButtonGrayFLat");
-            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");
+            btn27.Style = (Style)btn2.FindResource("ButtonGrayFLat");*/
 
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
+        
         
 
         private void Button_Click(object sender, RoutedEventArgs e)

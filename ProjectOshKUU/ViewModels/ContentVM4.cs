@@ -1,4 +1,5 @@
 ﻿using OshKUU.ViewModels.BaseViewModels;
+using ProjectOshKUU.ViewModels.BaseViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjectOshKUU.ViewModels
 {
-    public class ContentVM4 : BaseView
+    public class ContentVM4 : AbstractContent
     {
 
     }

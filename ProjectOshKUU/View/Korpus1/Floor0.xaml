@@ -84,7 +84,7 @@
                 <!--Каридордун жогорку болугу-->
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Image/t2.png" Width="80" Margin="-10,5,-8,0" Height="110"/>
-                    <Button Command="{Binding ButtonInfoCommand}" CommandParameter="5" x:Name="btn5" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number5}" Width="70" Margin="0,5,0,0" Height="110"/>
+                    <Button Command="{Binding ButtonInfoCommand}" CommandParameter="5" x:Name="btn5" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number5,UpdateSourceTrigger=PropertyChanged}" Width="70" Margin="0,5,0,0" Height="110"/>
                     <Border     Background="White"  Width="40" Margin="5,5,0,0" Height="110"/>
                     <Button x:Name="btn6" Command="{Binding ButtonInfoCommand}" CommandParameter="6" Style="{StaticResource ButtonGrayFLat}"  Uid="{Binding Number6}" Width="80" Margin="5,5,0,0" Height="110"/>
                     <Button x:Name="btn7" Command="{Binding ButtonInfoCommand}" CommandParameter="7" Style="{StaticResource ButtonGrayFLat}" Uid="{Binding Number7}"  Width="80" Margin="5,5,0,0" Height="110"/>

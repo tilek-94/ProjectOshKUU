@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectOshKUU.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -22,5 +23,10 @@ namespace ProjectOshKUU.View.WindowsPanel
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StaticLanguageClass.SelectBuildingMethod("main");
+        } 
     }
 }

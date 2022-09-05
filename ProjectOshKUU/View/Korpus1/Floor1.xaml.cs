@@ -62,7 +62,7 @@ namespace ProjectOshKUU.View.Korpus1
                     btn = btn11;
                     break;
                 case 12:
-                    btn = btn22;
+                    btn = btn12;
                     break;
                 case 13:
                     btn = btn13;

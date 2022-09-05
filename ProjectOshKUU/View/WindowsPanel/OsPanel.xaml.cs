@@ -26,16 +26,38 @@ namespace ProjectOshKUU.View.WindowsPanel
             InitializeComponent();
             //this.DataContext = new OsPanelVM();
         }
-       
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            StaticLanguageClass.SelectBuildingMethod("2");
+            StaticLanguageClass.SelectBuildingMethod("1");
             this.Close();
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
+            StaticLanguageClass.SelectBuildingMethod("2");
+            this.Close();
+        }
+
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
             StaticLanguageClass.SelectBuildingMethod("3");
+            this.Close();
+        }
+
+        private void Button_Click4(object sender, RoutedEventArgs e)
+        {
+            StaticLanguageClass.SelectBuildingMethod("4");
+            this.Close();
+        }
+        private void Button_Click5(object sender, RoutedEventArgs e)
+        {
+            StaticLanguageClass.SelectBuildingMethod("5");
+            this.Close();
+        }
+        private void Button_Click6(object sender, RoutedEventArgs e)
+        {
+            StaticLanguageClass.SelectBuildingMethod("6");
             this.Close();
         }
     }

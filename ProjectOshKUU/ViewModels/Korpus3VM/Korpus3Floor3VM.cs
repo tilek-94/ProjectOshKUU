@@ -3,9 +3,9 @@ using ProjectOshKUU.ViewModels.BaseViewModels;
 
 namespace ProjectOshKUU.ViewModels.Korpus3VM
 {
-    public class Korpus3Floor1VM : AbstractClassBase
+    public class Korpus3Floor3VM : AbstractClassBase
     {
-        public Korpus3Floor1VM(IAudienceService service, int biulding, int floor) : base(service, biulding, floor)
+        public Korpus3Floor3VM(IAudienceService service, int biulding, int floor) : base(service, biulding, floor)
         {
         }
     }

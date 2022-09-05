@@ -15,14 +15,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProjectOshKUU.View.Korpus3
+namespace ProjectOshKUU.View.Korpus6
 {
     /// <summary>
     /// Логика взаимодействия для ContentWindow.xaml
     /// </summary>
-    public partial class ContentWindowKor3 : UserControl
+    public partial class ContentWindowKor6 : UserControl
     {
-        public ContentWindowKor3()
+        public ContentWindowKor6()
         {
             InitializeComponent();
         }

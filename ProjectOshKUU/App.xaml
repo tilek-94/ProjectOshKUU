@@ -5,9 +5,11 @@
              xmlns:VM="clr-namespace:ProjectOshKUU.ViewModels"
              xmlns:KorpusVM="clr-namespace:ProjectOshKUU.ViewModels.Korpus1VM"
              xmlns:KorpusVM3="clr-namespace:ProjectOshKUU.ViewModels.Korpus3VM"
+             xmlns:KorpusVM6="clr-namespace:ProjectOshKUU.ViewModels.Korpus6VM"
              xmlns:views="clr-namespace:ProjectOshKUU.View.Korpus1"
              xmlns:views2="clr-namespace:ProjectOshKUU.View.Korpus2"
              xmlns:Korpus3="clr-namespace:ProjectOshKUU.View.Korpus3"
+             xmlns:Korpus6="clr-namespace:ProjectOshKUU.View.Korpus6"
              xmlns:views3="clr-namespace:ProjectOshKUU.View"
              xmlns:views4="clr-namespace:ProjectOshKUU.View.WindowsPanel"
            
@@ -34,6 +36,10 @@
             <!--3-корпус-->
             <DataTemplate DataType="{x:Type VM:ContentVM3}">
                 <Korpus3:ContentWindowKor3/>
+            </DataTemplate>
+            <!--6-корпус-->
+            <DataTemplate DataType="{x:Type VM:ContentVM6}">
+                <Korpus6:ContentWindowKor6/>
             </DataTemplate>
 
             <!--Университеттин сайты-->
@@ -69,7 +75,26 @@
             <DataTemplate DataType="{x:Type  KorpusVM3:Korpus3Floor2VM}">
                 <Korpus3:Floor2Kor3/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM3:Korpus3Floor3VM}">
+                <Korpus3:Floor3Kor3/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM3:Korpus3Floor0VM}">
+                <Korpus3:Floor0Kor3/>
+            </DataTemplate>
            
+            <!-- End 3-корпус этаждары-->
+
+            <!--3-корпус этаждары-->
+            <DataTemplate DataType="{x:Type  KorpusVM6:Korpus6Floor0VM}">
+                <Korpus6:Floor0Kor6/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM6:Korpus6Floor1VM}">
+                <Korpus6:Floor1Kor6/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type  KorpusVM6:Korpus6Floor2VM}">
+                <Korpus6:Floor2Kor6/>
+            </DataTemplate>
+    
             <!-- End 3-корпус этаждары-->
         </ResourceDictionary>
     </Application.Resources>
